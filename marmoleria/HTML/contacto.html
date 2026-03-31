@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marmolería</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="/css/contacto.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+  
+
+    .form-contacto {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .form-contacto h3 {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      background-color: #999;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #666;
+    }
+
+  
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="../img/logo marmoleria.png" alt="Logo" class="icono-nav">
+    Marmolería San Justo
+  </div>
+  <nav class="menu">
+    <a href="../html/index.html">
+      <img src="../icons/home.svg" alt="Inicio" class="icono-nav1">
+      Inicio
+    </a>
+    <a href="../html/catalogo.html">
+      <img src="../icons/catalogo.svg" alt="Catálogo" class="icono-nav1">
+      Catálogo
+    </a>
+    <a href="../html/contacto.html">
+      <img src="../icons/contact.svg" alt="Contacto" class="icono-nav1">
+      Contacto
+    </a>
+  </nav>
+</header>
+
+<!-- Contacto -->
+<section class="seccion-contacto">
+    <div class="contacto-container">
+      <!-- Columna izquierda -->
+      <div class="contacto-info">
+        <p class="etiqueta">NUESTRO CONTACTO</p>
+        <h2>Ponte En Contacto Con Nosotros</h2>
+        <p class="descripcion">Podés visitarnos, llamarnos o dejarnos un mensaje usando el formulario. ¡Estamos para ayudarte!</p>
+  
+        <div class="info-bloque">
+          <h4><img src="../icons/lc.svg" class="icono"> Estamos En</h4>
+          <p>Local comercial Paraguay 2225<br>Fábrica Jujuy 5208 La Tablada</p>
+        </div>
+  
+        <div class="info-bloque">
+          <h4><img src="../icons/ph.svg" class="icono"> Contáctenos</h4>
+          <p>+54 911 6177-7234</p>
+        </div>
+  
+        
+      </div>
+  
+      <!-- Columna derecha -->
+      <div class="contacto-derecha">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.9759060164624!2d-58.55594152480907!3d-34.6805575615594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9001070762b%3A0x2088c91155f75b69!2sMarmoler%C3%ADa%20San%20justo!5e0!3m2!1ses!2sar!4v1747095728754!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+       <form id="form-contacto">
+  <h3>¿Cómo Podemos Ayudarle?</h3>
+
+  <div class="form-row">
+    <input type="text" id="nombre" placeholder="Su nombre" required>
+    <input type="email" id="email" placeholder="Correo electrónico" required>
+  </div>
+
+  <div class="form-row">
+    <input type="tel" id="telefono" placeholder="Número de teléfono" required>
+    <input type="text" id="alcance" placeholder="Alcance del proyecto">
+  </div>
+
+  <textarea id="mensaje" placeholder="Escriba su mensaje..."></textarea>
+
+  <textarea id="medidas" placeholder="Medidas (largo, ancho, zócalos, bacha, anafe, etc.)" required></textarea>
+  <input type="text" id="material" placeholder="Elección del material" required>
+  <input type="text" id="ubicacion" placeholder="Ubicación de entrega" required>
+  <select id="tipoCliente" required>
+    <option value="">Tipo de cliente</option>
+    <option value="Arquitecto">Arquitecto</option>
+    <option value="Constructor">Constructor</option>
+    <option value="Particular">Particular</option>
+  </select>
+
+  <button type="submit">ENVIAR AHORA</button>
+</form>
+
+
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+
+<!-- footer -->
+<footer class="footer-modern">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2 class="logo-footer">Marmolería - San Justo</h2>
+      </div>
+  
+      <div class="footer-links">
+        <div class="footer-section">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="../html/index.html">Inicio</a></li>
+            <li><a href="../html/catalogo.html">Catálogo</a></li>
+            <li><a href="../html/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+       
+        <div class="footer-section">
+          <h4>Redes</h4>
+          <ul>
+          
+            <li><a href="https://www.instagram.com/marmoleriasanjusto?igsh=MXdmNmE3aXR5bDQ3aA==">Instagram</a></li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Marmolería San Justo. Todos los derechos reservados.</p>
+      <a href="https://techfixweb.site/">Hecho Por TechFixPc</a>
+    </div>
+  </footer>
+
+
+
+<script src="../js/app.js" defer></script>
+<script>
+  document.getElementById('form-contacto').addEventListener('submit', function (event) {
+    event.preventDefault(); // evita el comportamiento por defecto del formulario
+
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const telefono = document.getElementById('telefono').value;
+    const alcance = document.getElementById('alcance').value;
+    const mensaje = document.getElementById('mensaje').value;
+    const medidas = document.getElementById('medidas').value;
+    const material = document.getElementById('material').value;
+    const ubicacion = document.getElementById('ubicacion').value;
+    const tipoCliente = document.getElementById('tipoCliente').value;
+
+    const texto = `👋 Hola! Tengo una consulta:\n
+🧑 Nombre: ${nombre}
+📧 Email: ${email}
+📱 Teléfono: ${telefono}
+📌 Alcance del proyecto: ${alcance}
+📝 Mensaje: ${mensaje}
+
+📏 Medidas: ${medidas}
+🪨 Material: ${material}
+📍 Ubicación de entrega: ${ubicacion}
+👤 Tipo de cliente: ${tipoCliente}`;
+
+    const numeroWhatsapp = "5491161777234"; // <---- CAMBIÁ ESTE NÚMERO POR EL TUYO
+    const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank');
+  });
+</script>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5491161777234?text=Hola%2C%20quiero%20hacer%20una%20consulta" 
+   class="whatsapp-float" target="_blank" title="Chatear por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" 
+       alt="WhatsApp" style="width: 60px; height: 60px;">
+</a>
+
+</body>
+</html>

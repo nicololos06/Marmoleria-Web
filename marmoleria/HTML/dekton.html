@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marmolería</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="/css/contacto.css".css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="../img/logo marmoleria.png" alt="Logo" class="icono-nav">
+    Marmolería San Justo
+  </div>
+  <nav class="menu">
+    <a href="../html/index.html">
+      <img src="../icons/home.svg" alt="Inicio" class="icono-nav1">
+      Inicio
+    </a>
+    <a href="../html/catalogo.html">
+      <img src="../icons/catalogo.svg" alt="Catálogo" class="icono-nav1">
+      Catálogo
+    </a>
+    <a href="../html/contacto.html">
+      <img src="../icons/contact.svg" alt="Contacto" class="icono-nav1">
+      Contacto
+    </a>
+  </nav>
+</header>
+
+<!-- catalogo -->
+<section class="seccion-catalogo-con-sidebar">
+    <aside class="sidebar-catalogo">
+      <h3>Secciones</h3>
+      
+        <ul>
+            <li><a href="#" data-categoria="material">Materiales</a></li>
+
+          </ul>
+          
+    </aside>
+  
+    <div class="contenido-catalogo">
+      <div class="contenedor-texto">
+        <h2 class="subtitulo" style="text-align:left;">Catálogo de Productos</h2>
+        <p style="max-width:700px;">
+          Seleccioná una categoría o explorá nuestros productos destacados. Calidad garantizada.
+        </p>
+      </div>
+  
+      <div class="catalogo-grid">
+        <!-- materiales -->
+        <div class="card material">
+            <img src="../img/rougui lena.jpg" alt="Granito Negro Brasil" class="card-img">
+            <div class="card__content">
+              <p class="card__title">Rougui Lena</p>
+              
+            </div>
+        </div>
+
+        <div class="card material">
+            <img src="../img/miami vena.jpg" alt="Granito Negro Brasil" class="card-img">
+            <div class="card__content">
+              <p class="card__title">Miami Vena</p>
+              
+            </div>
+          </div>
+
+        
+
+          <div class="card material">
+            <img src="../img/blanco zeus.jpg" alt="Granito Negro Brasil" class="card-img">
+            <div class="card__content">
+              <p class="card__title">Blanco Zeus</p>
+              
+            </div>
+          </div>
+
+
+          
+
+
+
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+
+
+<!-- footer -->
+<footer class="footer-modern">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2 class="logo-footer">Marmolería - San Justo</h2>
+      </div>
+  
+      <div class="footer-links">
+        <div class="footer-section">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="../html/index.html">Inicio</a></li>
+            <li><a href="../html/catalogo.html">Catálogo</a></li>
+            <li><a href="../html/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+       
+        <div class="footer-section">
+          <h4>Redes</h4>
+          <ul>
+          
+            <li><a href="https://www.instagram.com/marmoleriasanjusto?igsh=MXdmNmE3aXR5bDQ3aA==">Instagram</a></li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Marmolería San Justo. Todos los derechos reservados.</p>
+      <a href="https://techfixweb.site/">Hecho Por TechFixPc</a>
+    </div>
+  </footer>
+  
+  
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.sidebar-catalogo a');
+    const cards = document.querySelectorAll('.catalogo-grid .card');
+
+    // OCULTA TODAS LAS TARJETAS AL INICIAR
+    cards.forEach(card => card.style.display = 'none');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        links.forEach(l => l.classList.remove('activo'));
+        this.classList.add('activo');
+
+        const categoria = this.dataset.categoria;
+
+        cards.forEach(card => {
+          if (categoria === 'todos' || card.classList.contains(categoria)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // HACE CLICK EN 'MATERIALES' AUTOMÁTICAMENTE AL CARGAR
+    const defaultLink = document.querySelector('[data-categoria="material"]');
+    if (defaultLink) {
+      defaultLink.click();
+    }
+  });
+</script>
+
+  
+  
+
+</body>
+</html>
